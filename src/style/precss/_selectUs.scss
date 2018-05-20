@@ -1,0 +1,54 @@
+/*select us*/
+.reasons {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.reason-item {
+	flex: 1 0 32%;
+	min-width: 255px;
+	text-align: left;
+	margin-bottom: 2rem;
+	
+	// outline: 1px dashed green;
+	padding-right: 0.85em;
+}
+.reason-item .icon {
+	display: inline-block;
+	width: (53px / $font-size) + rem;
+	height: (53px / $font-size) + rem;
+	margin: 0.2rem;
+	float: left;
+	background-position-y: -14rem; 
+}
+.icon--grows {background-position-x: -0.38rem;}
+.icon--range {background-position-x: -7.87rem;}
+.icon--arrow {background-position-x: -15rem;}
+.icon--screen {
+	background-position-x: -4rem;
+	/*width: (53px / $font-size) + rem;*/
+}
+.icon--calendar {background-position-x: -11.42rem;}
+.icon.icon--award {
+	background-position-x: -18.55rem;
+	width: (35px / $font-size) + rem;
+	margin: 0.2rem 0.7rem;
+}
+
+.item-heading--reasons {
+	display: inline-block;
+	// padding-left: 55px;
+	height: (50px / $font-size) + rem;
+	width: 46.5%;
+	margin-top: 0;
+	margin-bottom: 1em;
+	white-space: nowrap;
+}
+.proclamation{
+	text-align: center;
+}
+.proclamation__text {
+	font-size: 1.67rem;
+	display: inline-block;
+	margin-right: 1em;
+}

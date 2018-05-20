@@ -1,0 +1,33 @@
+/*Our Focus*/
+.focuses {
+	display: flex;
+	justify-content: space-around;
+}
+.focus-item {
+	@extend %box;
+	border-bottom: 3px solid;
+	padding: 4rem 2.5% 2.5%;
+	margin: 1rem 1%;
+	background-color: #fff;
+	width: 29%;
+	flex-grow: 1;
+}
+.focus-item .icon {
+	width: (60px / $font-size) + rem;
+	height: (52px / $font-size) + rem;
+	margin: 0 auto;
+	background-position-x: -(55px  / $font-size) + rem;
+}
+.icon--focus-web {
+	background-position-y: -(2px / $font-size) + rem;
+}
+.icon--focus-ux {
+	background-position-y: -(55px / $font-size) + rem;
+}
+.icon--focus-photo {
+	background-position-y: -(108px / $font-size) + rem;
+}
+.icon--focus-app {
+	background-position-y: -(158px / $font-size) + rem;
+}
+

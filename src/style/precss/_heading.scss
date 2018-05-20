@@ -1,0 +1,36 @@
+.heading-text {
+	font-family: $font-family-heading;
+	@include size-in-rem(font-size, 60px);
+	line-height: 1.35;
+	margin-left: 2em;
+	margin-right: 2em;
+	@extend .no-select-text;
+}
+.feachers {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 2.8em;
+}
+.feachers-item {
+	display: block;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	@extend .no-select-text;
+}
+.feachers-item .icon {
+	width: 3rem;
+	height: 3rem;
+	margin: 2.267rem auto;
+	background-position-x: -0.2167rem;
+}
+.icon--price {
+	background-position-y: -6.1533rem;
+}
+.icon--clock {
+	background-position-y: -3.1467rem;
+}
+.icon--check {
+	background-position-y: -0.08rem;
+}
+
+

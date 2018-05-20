@@ -1,0 +1,14 @@
+@import "includes";
+html {
+	font-size: 93.75%; /*15px*/
+}
+
+body {
+  color: $color;
+  font-size: 1rem;
+  font-family: $font-family-text;
+  font-weight: 400;
+  line-height: 1.8em;
+  counter-reset: h1 steps;
+}
+

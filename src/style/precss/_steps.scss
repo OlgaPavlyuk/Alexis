@@ -1,0 +1,57 @@
+/*steps*/
+.step {
+	margin: 0;
+	// margin-bottom: 1px;
+	text-align: center;
+	position: relative;
+}
+.step-item {
+	@extend %box;
+	border-bottom: 3px solid;
+	width: 41%;
+	padding: 3.33rem 2.4% 3% 8rem;
+	text-align: left;
+	position: absolute;
+	top: -3.33rem;
+	background-color: #fff;
+	z-index: 10;
+}
+.step:nth-child(odd) .step-item{
+	left: 0;
+}
+.step:nth-child(even) .step-item{
+	right: 0;
+}
+.item-heading--steps {
+	font-size: (25px / $font-size) + rem;
+	font-weight: 400;
+	color: #272727;
+	text-transform: capitalize;
+	position: relative;
+}
+.item-heading--steps:before {
+	content: '0' counter(steps); 
+	counter-increment: steps;
+	font-family: Libre Baskerville;
+	font-size: 2em;
+	font-weight: bold;
+	color: #e0e0e0;
+	position: absolute;
+	right: 100%;
+	top: -50%;
+	width: 1.7em;
+	height: 1.7em;
+	background: linear-gradient(-45deg, transparent 50%, #e0e0e0 52%, transparent 52%, transparent);
+}
+.step-img {
+	width: 556px;
+	height: 300px;
+	overflow: hidden;
+	margin: 0 auto;
+	
+	.img {
+		// width: 100%;
+		// height: 100%;
+		// margin: 0 auto;
+	}
+}

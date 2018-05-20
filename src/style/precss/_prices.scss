@@ -1,0 +1,89 @@
+/*pricing table*/
+.offers {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.offer-item {
+	width: 32%;
+	// margin: 0 0.8%;
+	@extend %box;
+	background-color: #fff;
+	padding: 2rem 2%;
+	border-top: 3px solid;
+}
+.offer-name {
+	font-size: (20px / $font-size) + rem;
+	color: #313131;
+	font-weight: 500;
+	text-transform: capitalize;
+}
+.offer-price {
+	font-size: 1rem;
+	width: (116px / $font-size) + em;
+	height: (116px / $font-size) + em;
+	border-radius: 50%;
+	border: 3px solid;
+	position: relative;
+	margin: 2.5em auto;
+
+	.price__text {
+		border: 3px solid #fff;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		font-size: 0.87em;
+
+
+		background-color: currentColor;
+		& span:first-child() {
+			font-size: 1.92em;
+		}
+		span {
+			color: #fff;
+			display: block;
+		}
+	}
+}
+.tariff-option {
+	color: $color;
+	margin: 1.33em 0;
+	text-transform: capitalize;
+	& span {
+		font-weight: 600;
+		color: #272727;
+	}
+}
+.disable {
+	opacity: 0.5;
+	& span {
+		font-weight: 400;
+	}
+}
+.button--price {
+	background-color: #fff;
+	color: inherit;
+	border-color: inherit;
+	white-space: nowrap;
+}
+.button--price:hover {
+	color: #fff;
+}
+
+@for $i from 1 through length($colors) {
+	.colored-#{$i} .button--price:hover {
+		background-color: nth($colors, $i);
+		border-color: nth($colors, $i);
+	}
+} 
+
+

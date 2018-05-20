@@ -1,0 +1,48 @@
+
+.in-view {
+	&.zoomIn {
+		animation-name: zoomIn;
+	}
+	&.slide-left {
+		animation-name: slideToLeft;
+	}
+	&.slide-right {
+		animation-name: slideToRight;
+	}
+}
+.animated {
+	animation-duration: 1.5s;
+	animation-timing-function: ease-in-out;
+}
+
+
+@keyframes slideToLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(300px)
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+@keyframes slideToRight {
+	0% {
+		opacity: 0;
+		transform: translateX(-300px)
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+@keyframes zoomIn {
+	0% {
+		opacity: 0;
+		transform: scale(0)
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}

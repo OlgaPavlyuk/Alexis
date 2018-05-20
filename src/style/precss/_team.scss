@@ -1,0 +1,271 @@
+.team {
+	display: flex;
+	justify-content: space-around;
+}
+.team-item {
+	flex-grow: 1;
+	flex-basis: 23%;
+	margin-right: 1%;
+	z-index: 5;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+.member{
+	height: 100%;
+	border-bottom: 3px solid;
+	border-bottom-color: inherit;
+	@extend %box;
+	padding: 5px;
+	background-color: #fff;
+	// opacity: 0.8;
+	transition: opacity 0.25s;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 0;
+	position: relative;
+
+	&::after {
+		content: "\25b2";
+		display: block;
+		position: absolute;
+		bottom: 0;
+		right: 6px;
+		font-size: 1.2em;
+		color: transparent;
+		transform: scaleX(1.2) rotate(180deg);
+		transition: color 0.25s, transform 0.25s;
+	}
+	&:hover {
+		cursor: pointer;
+		// opacity: 1;
+		&::after {
+			color: currentColor;
+		}
+		.photo--grad:after {
+			opacity: 0;
+		}
+	}
+}
+.ie-member {
+
+	.member-photo {
+		flex-shrink: 0;
+	}
+}
+.member--active .member{
+	opacity: 1;
+	&::after {
+		transform: scaleX(1.2) rotate(0deg);
+	}
+}
+.member-photo {
+	margin-bottom: 0.5em;
+	flex-shrink: 0; //чинит ie
+}
+
+.member-name {
+	color: inherit;
+	@include size-in-rem (font-size, 18px);
+	margin: 0.5em 0;
+}
+.member-position {
+	@include size-in-rem (font-size, 13px);
+}
+.member-info {
+	display: none;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	padding-top: 50px;
+}
+.clone {
+	display: block;
+}
+.inner {
+	background-color: #fff;
+	text-align: left;
+	@extend %box;
+	padding: 4.5% 4% 4% 8%;
+	position: relative;
+
+	.text {
+		flex: 1 1 60%;
+		margin: 0;
+	}
+}
+.arrow {
+	// content: "\25b2";
+	display: block;
+	position: absolute;
+	bottom: 100%;
+	margin-bottom: -6px;
+	margin-left: -0.667rem;
+	@include size-in-rem(font-size, 70px);
+	color: #fff;
+	text-shadow: 0 -8px 6px rgba(0,0,0,.1);
+	transform: scaleX(1.4) translate(-25%,-50%);
+}
+
+.personal-info {
+	display: flex;
+}
+.member-links{
+	border-left: 2px solid #efefef;
+	padding-left: 2em;
+	align-self: center;
+}
+
+.icon-link {
+	width: 2.68rem;
+	height: 2.68rem;
+	align-self: center;
+	margin: 0 2rem;	
+}
+
+.social-link {
+	padding: 4px 0;
+	.link {
+		color: #616161;
+		display: block;
+		position: relative;
+		padding-left: 1.6rem;
+
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 1.3em;
+			height: 1.2em;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			transform-origin: center center;
+			transition: transform 0.2s;
+			@extend %svg-sprite;
+			background-position-x: -(230px / $font-size) + rem;
+		}
+		&:hover {
+			color: darken(#616161, 15);
+			&::before{
+				transform: scale(1.5);
+			}
+		}
+	}
+}
+.link--fb:before{ background-position-y: -0.2em;}
+.link--tw:before{ background-position-y: -1.4em;}
+.link--li:before{ background-position-y: -2.6em;}
+.link--in:before{ background-position-y: -3.8em;}
+
+@media screen and (max-width: 992px) {
+	.member-name {
+		@include size-in-rem (font-size, 16px);
+	}
+	.inner {
+		padding: 1.5rem 1.5rem 2rem 3rem;
+	}
+	.member--active .member-info {
+		display: none;
+	}
+}
+@media screen and (max-width: 768px) {
+	.team {
+		flex-wrap: wrap;
+	}
+	.team-item {
+		flex: 1 0 46%;
+		margin: 2%;
+		margin-bottom: 0;
+		&:last-child {
+			margin: 2%;
+			margin-bottom: 0;
+		}
+	}
+	.personal-info {
+		flex-wrap: wrap;
+		.text {
+			flex-basis: 100%;
+		}
+	}
+	.member-position {
+		font-size: 1rem;
+		margin-bottom: 0px;
+	}
+	.member {
+		padding: 10px;
+	}
+	.member-links{
+		width: 80%;
+		border-left: none;
+		// margin-left: 4.67rem;
+		margin-top: 1em;
+	}
+	.icon-link {
+		float: left;
+		margin: 0;
+		margin-top: 0.8em;
+	}
+	.member-info {
+		padding-top: 30px;
+		margin-bottom: 15px;
+	}
+	.arrow {
+		@include size-in-rem(font-size, 50px);
+		margin-bottom: -15px;
+	}
+	.social-link {
+		display: inline-block;
+		margin-right: 2%;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+@media screen and (max-width: 660px) {
+	.inner {
+		padding: 1.5rem 1.5rem 1rem 2rem;
+	}
+	.member-links{
+		border-top: 2px solid #efefef;
+		margin-left: 0;
+		padding-left: 0;
+		padding-top: 6px;
+		width: 100%;
+	}
+	.icon-link {
+		display: none;
+	}
+}
+@media screen and (max-width: 480px) {
+	.clone {
+		display: none;
+	}
+	.member--active .member-info {
+		display: block;
+	}
+
+	.member {
+		margin: 0 auto;
+		margin-top: 15px;
+		width: 75%;
+	}
+	.member-name {
+		font-size: 1.2em;
+	}
+	.arrow {
+		left: 50%;
+	}
+
+	.social-link {
+		display: inline-block;
+		width: 45%;
+		.link {
+			padding-top: 6px;
+			padding-bottom: 6px;
+		}
+	}
+}

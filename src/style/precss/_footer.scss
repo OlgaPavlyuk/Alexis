@@ -1,0 +1,53 @@
+.page__line--footer {
+	padding-bottom: 10rem;
+}
+.footer {
+	background-color: #3f4049;
+	display: flex;
+}
+.footer-item {
+	flex: 1 1 25%;
+	border-bottom: 3px solid;
+	padding: 2.5rem 3.1%;
+	text-align: left;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.item-heading--footer {
+	@include size-in-rem(font-size, 18px);
+	font-weight: 500;
+	margin-bottom: 1.3em;
+}
+.address {
+	color: #fef4f2;
+} 
+
+.logo--footer {
+	@include size-in-rem(font-size, 50px);
+	text-align: center;
+	align-self: center;
+}
+	
+.footer-social-icons {
+	white-space: nowrap;
+	.icon {
+		display: inline-block;
+		width: 2.2em;
+		height: 2.2em;
+		margin-right: 5.1%;
+		background-position-x: -(193px / $font-size) + rem;
+		transition: transform 0.25s ease;
+		&:hover {
+			transform: rotate(30deg);
+		}
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+	.icon-social--fb{ background-position-y: -0.18em;}
+	.icon-social--tw{ background-position-y: -3.1em;}
+	.icon-social--in{ background-position-y: -5.55em;}
+	.icon-social--gp{ background-position-y: -8em;}
+}

@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush|Sacramento|Libre+Baskerville:400,700|Poppins:400,500,600,700');
+$color: #616161;
+$color_red: #fc5f45;
+$color_green: #38c695;
+$color_purple: #b27cf5;
+$color_yellow: #feb960;
+$accent_color: $color_red;
+$font-family-text: Poppins, sans-serif;
+$font-family-heading: Libre Baskerville, Arial, serif;
+$font-size: 15px;
+
+$colors: $color_red, $color_green, $color_purple, $color_yellow;
+
+@mixin font-size($size) {
+	font-size: #{$size / $font-size}rem;
+}
+@mixin size-in-rem($prop, $size) {
+	#{$prop}: #{$size / $font-size}rem;
+}
+
+%page__cell {
+	max-width: 1140px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+
+	overflow: hidden;
+}
+%box {
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+%svg-sprite {
+	background-image: url(../../images/sprite.svg);
+	background-repeat: no-repeat;
+	background-size: (320px/$font-size) + rem (270px/$font-size) + rem;
+}
+*,
+*:after, 
+*:before {
+	box-sizing: border-box;
+}
+.page__line {
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow: hidden;
+	background-size: cover;
+}
+.page__line--our-focus,
+.page__line--team,
+.page__line--pricing,
+.page__line--blog
+ {
+	background-color: #f7f7f7;
+}
+.page__line--heading,
+.page__line--video,
+.page__line--stats,
+.page__line--testimonials
+ {
+	background-color: #3f4049;
+	color: #fff;
+	position: relative;
+
+	.heading {
+		color: #fff;
+	}
+
+	&::before {
+		background-color: rgba(38, 38, 50, 0.8);
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+.page__cell {
+	@extend %page__cell;
+}
+.section {
+	padding: 10rem 0.667rem;
+	position: relative;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.relation  {
+	position: relative;
+}
+.relation__offset {
+    padding-top: 65%;
+    height: 0;
+}
+.relation__content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.link {
+	color: inherit;
+	text-decoration: none;
+}
+.hidden {
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+	height: 0;
+	margin: 0;
+	padding: 0;
+}
+ol, ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.svg-icon {
+	display: block;
+	position: relative;	
+}
+svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.icon {
+	display: block;
+	font-size: 1rem;
+	@extend %svg-sprite;
+}
+
+@for $i from 1 through length($colors) {
+	.colored-#{$i} {
+		color: nth($colors, $i);
+		.img--grad{
+			background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(nth($colors, $i), 1));
+		}
+		.photo--grad:after{
+			background: linear-gradient(to bottom, rgba(0,0,0,0.2) 65%, rgba(nth($colors, $i), 1));
+		}
+	}
+} 
+.colored-1, .colored-2, .colored-3, .colored-4 {
+	border-color: currentColor;
+	fill: currentColor;
+}
+.not_find_img {
+	height: 20rem;
+	background-color: #ccc;
+	padding: 1.2rem;	
+}
+.photo--grad {
+	position: relative;
+	
+	&:after  {
+	  position: absolute;
+	  content: "";
+	  width: 100%;
+	  height: 100%;
+	  top: 0;
+	  left: 0;
+	  opacity: 0.2;
+	  transition: opacity 0.25s;
+	}
+ }
+.img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+	width: 100%;
+}
+.photo--border {
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		box-shadow: inset 0 0 0 10px rgba(0, 0, 0, 0.4);
+	}
+}
+.text {
+	color: $color;
+}
+.no-select-text {
+	user-select: none;
+}
+.heading {
+	font-family: $font-family-heading;
+	text-transform: capitalize;
+	font-weight: bold;
+	@include size-in-rem(font-size, 50px);
+	@extend .no-select-text;
+	line-height: 1em;
+	color: #313131;
+	margin-top: 0;
+	position: relative;
+	z-index: 10;
+	
+	&:after {
+		content: counter(h1, decimal-leading-zero); 
+		counter-increment: h1;
+		font-family: $font-family-text;
+		font-weight: 600;
+		@include size-in-rem(font-size, 273px);
+		line-height: 1em;
+		color: #e0e0e0;
+		opacity: 0.3;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -100%;
+		z-index: -1;
+	}
+}
+.item-heading {
+	font-weight: 500;
+	@include font-size(20px);
+	color: #313131;
+	text-transform: capitalize;
+	@extend .no-select-text;
+}
+.item-description {
+	color: $color;
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+.title-description {
+	@include font-size(18px);
+	margin-bottom: (80px / $font-size) + rem;
+	@extend .no-select-text;
+}
+.button {
+	display: inline-block;
+	font-size: 1.067em;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	border-radius: 28px;
+	border: 2px solid;
+	transition: 0.2s ease-in;
+	padding: .7em 2.6em;
+	cursor: pointer;
+	color: #fff;
+	border-color: $accent_color;
+	background-color:  $accent_color;
+	
+	&:hover {
+		background-color: transparent;
+		color:  $accent_color;
+	}
+}
+
+.portfolio__project-name:before, 
+.about-us__text:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 3px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: linear-gradient(to left, #feb960, #feb960 25%, 
+										#b27cf5 25%,  #b27cf5 50%,
+										#38c695 50%, #38c695 75%, 
+										#fc5f45 75%,  #fc5f45);
+}
+
+.emptyPhoto {
+	background-image: url(../../images/unknown.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50% ;
+
+	img {
+		// min-height: 150px;
+		padding-top: 90%;
+	}
+}
+
+/*loader*/
+.loaderArea {
+	background-color: #616161;
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 9999;
+}
+.loader {
+	width: 50px;
+	height: 50px;
+	margin-left: -25px;
+	margin-top: -25px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	// transform: translate(-50%, -50%);
+	border: 2px solid;
+	border-color: $accent_color $color_green $color_purple $color_yellow;
+	border-radius: 10px;
+	animation: border 2s linear infinite -0.15s;
+	&::after,
+	&::before {
+		position: absolute;
+		content: "";
+		display: block;
+		top: 0px;
+		left: 0px;
+		transform: translate(-50%, -50%);
+		width: 50%;
+		height: 50%;
+		border-radius: 50%;
+		animation: spin 2s ease infinite;
+		z-index: 15;
+	}
+	&::after {
+		background-color: $accent_color;
+	}
+	&::before {
+		background-color: $color_green;
+		animation-delay: -0.5s;
+	}
+	&:last-child::after {
+		animation-delay: -1s;
+		background-color: $color_purple;
+	}
+	&:last-child::before {
+		animation-delay: -1.5s;
+		background-color: $color_yellow;
+	}
+}
+
+@keyframes spin {
+	0%, 100% {
+		top: 0;
+		left: 0;
+	}
+	25% {
+		top: 0;
+		left: 100%;
+	}
+	50% {
+		top: 100%;
+		left: 100%;
+	}
+	75% {
+		top: 100%;
+		left: 0;
+	}
+}
+@keyframes border {
+	0%, 100% {
+		border-color: $color_green $color_purple $color_yellow $accent_color;
+	}
+	25% {
+		border-color: $accent_color $color_green $color_purple $color_yellow;
+	}
+	50% {
+		border-color: $color_yellow $accent_color $color_green $color_purple;	
+	}
+	75% {
+		border-color: $color_purple $color_yellow $accent_color $color_green;	
+	}
+}
+
+
+//to do
+
+// is it good hidding text in blog? 
+//img in blog - rewrite blog? 
+//transition for placeholder doesn't work in ff, ie
+//transition for team text < 768
+//hover for owl-dot?? (remove because of in touch-device)

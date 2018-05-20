@@ -1,0 +1,39 @@
+.subscribe-heading {
+	@include size-in-rem(font-size, 30px);
+	color: #272727;
+	font-weight: 400;
+	margin-bottom: 2em;
+	margin-top: 0;
+}
+.input-subscribe, 
+.button-subscribe {
+	@include size-in-rem(font-size, 16px);
+	border: 2px solid;
+	padding: .9em 1.9em;
+}
+.input-subscribe {
+	background-color: #f7f7f7;
+	color: #616161;
+	border-color: #efefef;
+	border-radius:  1.69em 0 0 1.69em;
+	transition: 0.2s ease-in;
+	display: inline-block;
+	outline: none;
+	@include size-in-rem(width, 320px);
+}
+.button-subscribe {
+	border-radius: 0 1.69em 1.69em 0;
+	border-color:  $color_red;
+	margin: -5px;
+}
+.input-subscribe:focus,
+.input-subscribe:hover { 
+	border-color: rgba($color_red, 0.3);
+}
+.input-subscribe:focus {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+.input-subscribe:focus + .button-subscribe {
+	
+}

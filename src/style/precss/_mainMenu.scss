@@ -1,0 +1,142 @@
+/*header*/
+.header {
+	@extend %page__cell;
+	padding: 0 0.667rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.page__line--header {
+	overflow: visible;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 1000;
+	color: #fff;
+	transition: background-color 0.2s ease-in, top 0.3s, transform 0.3s ease-in-out;
+	box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+.menu--on-scroll {
+	background-color: #fff;
+	color: #313131;
+	opacity: 0.9;
+	& .logo {
+		color: #616161;
+	}
+	.main-menu {
+		background-color: #fff;
+	}
+}
+.menu--on-top {
+	background-color: transparent;
+	color: #fff;
+	.main-menu {
+		// background-color: #3f4049;
+	}
+	&:hover {
+		background-color: rgba(#3f4049, 0.9);
+	}
+}
+.menu--on-scroll:hover {
+	opacity: 1;
+}
+.logo {
+	text-align: left;	
+	color: #fff;
+	text-decoration: none;
+	font-size: 35px;
+	font-family: 'Alex Brush', cursive;
+	// font-weight: bold;
+	display: inline-block;
+	h1 {
+		font-size: 1em;
+		font-weight: normal;
+		margin: 0;
+	}
+}
+.logo:first-letter {
+	color: #fc5f45;
+}
+.menu__list {
+	display: flex;
+	justify-content: flex-end;
+	@include size-in-rem(font-size, 14px);
+	font-weight: 500;
+}
+.menu-item {
+	text-transform: capitalize;
+	padding: 1em;
+	align-self: center;
+}
+.menu__link {
+	display: block;
+	border-bottom: 1px solid transparent;
+	transition: border 0.3s ease-in, color 0.3s ease-in;;
+	&:hover {
+		color: $accent_color; 
+		border-bottom-color: $accent_color;
+	}
+}
+.active {
+	color: $accent_color;
+	border-bottom-color: $accent_color;
+}
+
+.menu-toggle {
+	display: none;
+	position: relative;
+	float: right;
+	margin-right: 2%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 50px;
+	height: 40px;
+	cursor: pointer;
+	padding: 6px;
+	border-radius: 3px;
+}
+.menu-toggle__lines, 
+.menu-toggle__lines:before, 
+.menu-toggle__lines:after {
+	position: absolute;
+	display: block;
+	height: 3px;
+	width: 34px;
+	background-color: currentColor;
+	border-radius: 3px;
+} 
+
+.menu-toggle__lines {
+	top: 19px;
+	transition: background-color 0.2s ease-in 0.1s;
+	&:after,
+	&:before {
+		transition: top 0.2s linear 0.2s, transform 0.2s ease-in;
+		content: "";
+	}
+	&:after {
+		top: 10px;
+	}
+	&:before {
+		top: -10px;
+	}
+}
+
+.menu-toggle--active {
+	.menu-toggle__lines {
+		background-color: transparent;
+		&:after,
+		&:before {
+			transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+			content: "";
+		}
+		&:after {
+			top: 0;
+			transform: rotate(45deg);			
+		}
+		&:before {
+			top: 0;
+			transform: rotate(-45deg);			
+		}
+	}
+}

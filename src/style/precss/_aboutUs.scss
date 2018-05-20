@@ -1,0 +1,54 @@
+.about-us {
+	display: flex;
+	justify-content: space-between;
+}
+.about-us__text {
+	@extend %box;
+	text-align: left;
+	width: (650px / 1140px) * 100%;
+	align-self: center;
+	order: 1;
+	z-index: 3;
+	padding: 6.87rem 4.87rem 3.33rem 5.53rem;
+	background-color: #fff;
+	position: relative;
+}
+.portfolio__project-name:before {
+	top: 0;
+}
+.heading {
+	font-family: $font-family-heading;
+	text-transform: capitalize;
+	font-weight: bold;
+	@include size-in-rem(font-size, 50px);
+	line-height: 1em;
+	color: #313131;
+	margin-top: 0;
+	position: relative;
+	z-index: 10;
+	
+	&:after {
+		content: counter(h1, decimal-leading-zero); 
+		counter-increment: h1;
+		font-family: $font-family-text;
+		font-weight: 600;
+		@include size-in-rem(font-size, 273px);
+		line-height: 1em;
+		color: #e0e0e0;
+		opacity: 0.3;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -100%;
+		z-index: -1;
+	}
+}
+.about-us .heading:after {
+	bottom: -200%;
+	@include size-in-rem(left, -83px);
+}
+.about-us__picture {
+	@include size-in-rem(width, 555px);
+	overflow: hidden;
+	margin-right: -10%;
+}

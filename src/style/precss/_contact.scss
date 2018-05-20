@@ -1,0 +1,101 @@
+.page__line--contacts .heading {
+	color: #000;
+	&:after {
+		color: #d9d9d0;
+	}
+}
+.contactForm {
+	width: 68%;
+	margin: 0 auto;
+	position: relative;
+	.button:hover {
+		background-color: #fff;
+	}
+}
+.messegeResult {
+	display: none;	
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 10;
+	font-size: 2rem;	
+	// display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	& ~ * {
+		transition: filter 0.5s ease-in;
+	}
+}
+.success {
+	& ~ * {
+		opacity: 0.4;
+		color: #666;	
+
+		@supports (filter: blur(3px)) {
+			filter: blur(3px);
+			opacity: 0.5;
+			color: inherit
+		}
+	}
+}
+.input-custom {
+	display: inline-block;
+	float: left;
+	width: 49%;
+	margin-bottom: 2%;
+	padding: 0.97em;
+	border-radius: 3px;
+	border: 1px solid #efefef;
+	color: #616161;
+	outline: none;
+	transition: border 0.2s ease-in;
+}
+.input-custom:nth-of-type(even){
+	float: right;
+}  
+
+.input-custom::-webkit-input-placeholder {
+	/* autoprefixer: off */
+  text-align: center;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1; 
+}
+.input-custom:-ms-input-placeholder {
+	/* autoprefixer: off */
+  text-align: center;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1; 
+}
+.input-custom::-ms-input-placeholder {
+	/* autoprefixer: off */
+  text-align: center;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1; 
+}
+.input-custom::placeholder {
+	/* autoprefixer: off */
+  text-align: center;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1; 
+}
+
+.input-custom:focus {
+	border-color: #c1c1c1;
+	box-shadow: inset 0 0 2px rgba(black, 0.2);
+	&::placeholder {
+		opacity: 0;
+	}
+}
+
+.input-custom--message {
+	width: 100%;
+	margin-bottom: 3rem;
+	resize: none;	
+}
+.input-custom.required:invalid {
+	border-color: $color_red;
+}

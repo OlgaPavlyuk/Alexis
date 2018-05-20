@@ -1,0 +1,71 @@
+/*portfolio */
+.portfolio-list,
+.team-list {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.portfolio-item {
+	flex-basis: 31%;
+	min-width: 100px;
+	margin: 10px 5px;
+	border: 5px solid #fff;
+	position: relative;
+	overflow: hidden;
+	
+	&:after {
+		transition: bottom 0.6s ease-in-out, 
+					opacity 0.8s ease-in-out 0.1s;
+		opacity: 0;
+		content: "";
+		position: absolute;
+		bottom: 150%;
+		left: -1px;
+		right: -1px;
+		width: (62px/$font-size) + rem;
+		height: (62px/$font-size) + rem;
+		margin: 0 auto;
+		background-image: url(../../images/sprite.svg);
+		background-repeat: no-repeat;
+		background-size: (311px/$font-size) + rem (264px/$font-size) + rem;
+		background-position: (-247px / $font-size)+ rem (-3px/ $font-size)+ rem;
+	}
+	&:hover {
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		& .img--portfolio {
+			filter: brightness(75%);
+		}
+		&:after {
+			opacity: 1;
+			bottom: 50%;
+		}
+	}
+
+}
+.img--portfolio {
+	transition: filter 0.8s ease-in-out;
+	width: 100%;
+}
+.error__img {
+	border: 1px solid #ccc;
+	&:after {
+		display: none;
+	}
+}
+.portfolio__project-name {
+	font-size: (18px / $font-size) + rem;
+	color: #313131;
+	text-transform: capitalize;
+	margin: 0;
+	padding: 0.9em 0;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -100%;
+	transition: bottom 0.8s ease-in-out;
+	user-select: none;
+}
+.portfolio-item:hover .portfolio__project-name {
+	bottom: 0;
+}

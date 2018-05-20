@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#3f4049">
+	<link href="style/css/normalize/normalize.css" rel="stylesheet">
+	<link href="lib/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Libre+Baskerville:400,700|Poppins:400,500,600,700" rel="stylesheet"> -->
+	<link href="style/css/style.css" rel="stylesheet">
+	<title>Alexis</title>
+ </head>
+ <body class="page">
+ 	<svg style="display:none;">
+ 		<symbol id="radio" viewBox="0 0 16 16">
+		 		<path d="M15.5 8c0 2.1-0.7 3.9-2.2 5.3 -1.5 1.5-3.2 2.2-5.3 2.2 -2.1 
+		 		0-3.8-0.7-5.3-2.2C1.2 11.9 0.5 10.1 0.5 8s0.7-3.9 2.2-5.3C4.2 1.2 5.9 
+		 		0.5 8 0.5c2.1 0 3.8 0.7 5.3 2.2C14.8 4.1 15.5 5.9 15.5 8zM14.2 
+		 		8c0-1.7-0.6-3.2-1.8-4.4C11.2 2.4 9.7 1.7 8 1.7c-1.7 0-3.2 0.6-4.4 1.8C2.4 4.8 1.8 6.3 1.8 
+		 		8c0 1.7 0.6 3.2 1.8 4.4 1.2 1.2 2.7 1.8 4.4 1.8 1.7 0 3.2-0.6 4.4-1.8C13.6 11.2 14.2 9.7 14.2 
+		 		8zM8 4.2c1 0 1.9 0.4 2.7 1.1C11.4 6.1 11.7 7 11.7 8s-0.4 1.9-1.1 2.7C9.9 11.4 9 11.8 8 11.8c-1 
+		 		0-1.9-0.4-2.7-1.1C4.6 9.9 4.3 9 4.3 8s0.4-1.9 1.1-2.7C6.1 4.6 7 4.2 8 4.2z"/>
+ 		</symbol>
+ 		<symbol id="link" viewBox="0 0 36 35">
+ 				<path d="M36 5.5c0 1.5-0.5 2.8-1.6 3.8 -1 1-2.3 1.6-3.8 1.6 -2 0-3.6-0.9-4.6-2.7l-15.5 6.6c0.1 0.5 0.2 1 0.2 1.4 0 0.9-0.2 1.7-0.6 2.6l10 7.2c1.1-1.2 2.4-1.8 4-1.8 1.5 0 2.7 0.5 3.8 1.6 1 1.1 1.6 2.3 1.6 3.8 0 1.5-0.5 2.7-1.6 3.8 -1 1-2.3 1.6-3.8 1.6 -1.5 0-2.7-0.5-3.8-1.6 -1-1-1.6-2.3-1.6-3.8 0-1 0.2-1.8 0.5-2.5l-10-7.3c-1 1.1-2.3 1.7-3.9 1.7 -1.5 0-2.7-0.5-3.8-1.5 -1-1-1.6-2.3-1.6-3.8 0-1.5 0.5-2.8 1.6-3.8 1-1 2.3-1.5 3.8-1.5 2.1 0 3.6 0.9 4.6 2.7L25.6 7c-0.2-0.5-0.2-1-0.2-1.5 0-1.5 0.5-2.7 1.6-3.7 1-1 2.3-1.6 3.8-1.6 1.5 0 2.7 0.5 3.8 1.6C35.4 2.8 36 4 36 5.5L36 5.5zM20 29.5c0 1.1 0.4 2 1.2 2.8 0.8 0.8 1.7 1.2 2.8 1.2 1.1 0 2-0.4 2.8-1.2 0.8-0.8 1.2-1.7 1.2-2.8 0-1.1-0.4-2.1-1.2-2.9 -0.8-0.8-1.7-1.2-2.8-1.2 -1.1 0-2 0.4-2.8 1.2C20.4 27.4 20 28.4 20 29.5L20 29.5zM9.3 16.2c0-1.1-0.4-2-1.2-2.8 -0.8-0.8-1.7-1.2-2.8-1.2 -1.1 0-2 0.4-2.8 1.2 -0.8 0.8-1.2 1.7-1.2 2.8 0 1.1 0.4 2 1.2 2.8 0.8 0.8 1.7 1.2 2.8 1.2 1.1 0 2-0.4 2.8-1.2C8.9 18.2 9.3 17.3 9.3 16.2zM34.6 5.5c0-1.1-0.4-2-1.2-2.8 -0.8-0.8-1.7-1.2-2.8-1.2 -1.1 0-2 0.4-2.8 1.2 -0.8 0.8-1.2 1.7-1.2 2.8 0 1.1 0.4 2.1 1.2 2.9 0.8 0.8 1.7 1.2 2.8 1.2 1.1 0 2-0.4 2.8-1.2C34.3 7.6 34.6 6.6 34.6 5.5L34.6 5.5z"/>
+ 		</symbol>
+ 	</svg>
+ <div class="loaderArea">
+	   <div class="loader"></div>
+	   <div class="loader"></div>
+	</div>
+	<div class="page__line page__line--header" id="navbar">
+		<div class="page__cell">
+			<header class="header">
+				<a href="#" class="logo"><h1>Alexis</h1></a>
+				<div class="menu-toggle">
+					<span class="menu-toggle__lines"></span>
+				</div>
+				<nav class="main-menu">
+					<ul class="menu__list">
+						<li class="menu-item">
+							<a href="#about-us" class="menu__link link">about us</a>
+						</li>
+						<li class="menu-item">
+							<a href="#our-focus" class="menu__link link">our focus</a>
+						</li>
+						<li class="menu-item">
+							<a href="#portfolio" class="menu__link link">portfolio</a>
+						</li>							
+						<li class="menu-item"><a href="#our-team" class="menu__link link">our team</a>
+						</li>
+						<li class="menu-item">
+							<a href="#work-steps" class="menu__link link">work steps</a>
+						</li>
+						<li class="menu-item">
+							<a href="#pricing" class="menu__link link">pricing</a>
+						</li>
+						<li class="menu-item">
+							<a href="#testimonials" class="menu__link link">testimonials</a>
+						</li>
+						<li class="menu-item">
+							<a href="#blog" class="menu__link link">blog</a>
+						</li>
+						<li class="menu-item">
+							<a href="#contacts" class="menu__link link">contact</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+		</div>
+	</div>
+	<div class="page__line page__line--heading" style="background-image: url(images/banner.jpeg);">
+		<div class="page__cell">
+			<section class="section">
+				<h2 class="hidden">Company Presentation </h2>
+				<p class="heading-text">We design things with love and pation</p>
+				<a href="#portfolio" class="link button">Our Works</a>
+				<ul class="feachers">
+					<li class="feachers-item colored-2">
+						<span class="icon icon--price"></span>fixed price projects</li>
+					<li class="feachers-item colored-3">
+						<span class="icon icon--clock"></span>receive on time</li>
+					<li class="feachers-item colored-4">
+						<span class="icon icon--check"></span>satisfaction guranteed</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+	<div class="page__line page__line--about-us">
+		<div class="page__cell">
+			<section class="section about-us" id="about-us">
+				<div class="about-us__text animated slide-left">
+					<h2 class="heading">
+						about us
+					</h2>
+					<p class="text">
+					Analytics release series A financing launch party interaction design android angel investor. Vesting period social media sales conversion launch party rockstar incubator customer social proof graphical user interface technology supply chain. Non-disclosure agreement rockstar creative partner network launch party social proof paradigm shift long tail influencer. Monetization validation success. Seed round channels product management. Customer non-disclosure agreement strategy android growth hacking ramen buyer.
+					</p>
+				</div>
+				<div class="about-us__picture photo--border animated slide-right">
+					<img src="images/aboutUs.jpg" alt="about us" class="img" />
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="page__line page__line--our-focus">
+		<div class="page__cell">
+			<section id="our-focus" class="section">
+				<h2 class="heading">our focus</h2>
+				<p class="title-description">
+					We understand your requirement and provide quality works
+				</p>
+				<div class="focuses">
+					<div class="focus-item colored-1">
+						<span class="icon icon--focus-web"></span>
+						<h3 class="item-heading">Web Design</h3>
+						<p class="item-description">
+							Analytics release series A financing launch party interaction design android angel investor.
+						</p>
+					</div>
+					<div class="focus-item colored-2">
+						<span class="icon icon--focus-ux"></span>
+						<h3 class="item-heading">UX Design</h3>
+						<p class="item-description">
+							Analytics release series A financing launch party interaction design android angel investor.
+						</p>
+					</div>
+					<div class="focus-item colored-3">
+						<span class="icon icon--focus-photo"></span>
+						<h3 class="item-heading">Photography</h3>
+						<p class="item-description">
+							Analytics release series A financing launch party interaction design android angel investor.
+						</p>
+					</div>
+					<div class="focus-item colored-4">
+						<span class="icon icon--focus-app"></span>
+						<h3 class="item-heading">App Development</h3>
+						<p class="item-description">
+							Analytics release series A financing launch party interaction design android angel investor.
+						</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="page__line page__line--video" style="background-image: url(images/aboutUs-1.jpg);">
+		<div class="page__cell page__cell--video">
+			<div class="video-block">
+				<div class="video__description">
+					<p class="item-heading">Explore Our Awesomeness</p>
+					<button class="icon icon-video" id="video-button"></button>
+					<p class="text">Click to play the video</p>
+				</div>
+				<div class="video__container">
+					<video controls class="video">
+						<source src="video/video.mp4" type="video/mp4">
+					</video>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page__line page__line--portfolio">
+		<div class="page__cell">
+			<section id="portfolio" class="section">
+				<h2 class="heading">portfolio</h2>
+				<p class="title-description">
+					We understand your requirement and provide quality works
+				</p>
+				<ul class="portfolio-list">
+					<li class="portfolio-item">
+						<a href="#" class="project-link" target="_blank">
+							<img src="images/portfolio/portfolio-itema11.jpg" alt="Project One" class="img img--portfolio">
+						</a>
+						<p class="portfolio__project-name">Project One</p>
+					</li>
+					<li class="portfolio-item">
+						<a href="#" class="project-link" target="_blank">
+							<img src="images/portfolio/portfolio-itema12.jpg" alt="Project Two" class="img img--portfolio">
+						</a>
+						<p class="portfolio__project-name">Project Two</p>
+					</li>
+					<li class="portfolio-item">
+						<a href="#" class="project-link" target="_blank">
+							<img src="images/portfolio/portfolio-itema13.jpg" alt="Project Three" class="img img--portfolio">
+						</a>
+						<p class="portfolio__project-name">Project Three</p>
+					</li>
+					<li class="portfolio-item">
+						<a href="#" class="project-link" target="_blank">
+							<img src="images/portfolio/portfolio-itema21.jpg" alt="Project Four" class="img img--portfolio">
+						</a>
+						<p class="portfolio__project-name">Project Four</p>
+					</li>
+					<li class="portfolio-item">
+						<a href="#" class="project-link" target="_blank">
+							<img src="images/portfolio/portfolio-itema22.jpg" alt="Project Five" class="img img--portfolio">
+						</a>
+						<p class="portfolio__project-name">Project Five</p>
+					</li>
+					<li class="portfolio-item">
+						<a href="#" class="project-link" target="_blank">
+							<img src="images/portfolio/portfolio-itema23.jpg" alt="Project Six" class="img img--portfolio">
+						</a>
+						<p class="portfolio__project-name">Project Six</p>
+					</li>
+					<li class="portfolio-item">
+						<a href="#" class="project-link" target="_blank">
+							<img src="images/portfolio/portfolio-itema31.jpg" alt="Project Seven" class="img img--portfolio">
+						</a>
+						<p class="portfolio__project-name">Project Seven</p>
+					</li>
+					<li class="portfolio-item">
+						<a href="#" class="project-link" target="_blank">
+							<img src="images/portfolio/portfolio-itema32.jpg" alt="Project Eight" class="img img--portfolio">
+						</a>
+						<p class="portfolio__project-name">Project Eight</p>
+					</li>
+					<li class="portfolio-item">
+						<a href="#" class="project-link" target="_blank">
+							<img src="images/portfolio/portfolio-itema33.jpg" alt="Project Nine" class="img img--portfolio">
+						</a>
+						<p class="portfolio__project-name">Project Nine</p>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+	<div class="page__line page__line--team">
+		<div class="page__cell">
+			<section id="our-team" class="section">
+				<h2 class="heading">our team</h2>
+				<p class="title-description">
+					We understand your requirement and provide quality works
+				</p>
+
+				<div class="team">
+					<div class="team-item colored-1 member--active">
+						<div class="member">
+							<div class="member-photo photo--grad">
+								<img class="img" src="images/team/male.jpg" alt="Michael Schimitt, Founder and SEO">
+							</div>
+							<h3 class="member-name item-heading">Michael Schmitt</h3>
+							<p class="member-position item-description">Founder &#38; CEO</p>
+						</div>
+						<div class="member-info">
+							<div class="inner">
+							<p class="item-heading">About Bennet</p>
+							<div class="personal-info">
+								<p class="text">Text about person 1. Michael Schimitt was born in 1979 in rich farmes family. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos atque id praesentium aspernatur sint quod tempora perspiciatis est tenetur ut dolorum voluptas vitae rem quas deserunt nulla, voluptates fuga natus voluptatum deleniti. Iusto numquam at, ipsa facilis quas. Perferendis et similique, esse consequatur laboriosam nostrum.</p>
+								<span class="svg-icon icon-link">
+									<svg>
+										<use xlink:href="#link"></use>
+									</svg>
+								</span>
+								<ul class="member-links">
+									<li class="social-link"><a href="facebook.com/id11111" class="link link--fb">Facebook</a></li>
+									<li class="social-link"><a href="twitter.com/id11111" class="link link--tw">Twitter</a></li>
+									<li class="social-link"><a href="linkedin.com/id11111" class="link link--li">LinkedIn</a></li>
+									<li class="social-link"><a href="instagram.com/id11111" class="link link--in">Instagram</a></li>
+								</ul>
+								<span class="arrow">&#9650;</span>
+							</div>
+							</div>
+						</div>
+					</div>
+					<div class="team-item colored-2">
+						<div class="member">
+							<div class="member-photo photo--grad">
+								<img class="img" src="images/team/male.jpg" alt="David Kramer, Lead Developer">
+							</div>
+							<h3 class="member-name item-heading">David Kramerbergins</h3>
+							<p class="member-position item-description">Lead Developer</p>
+						</div>
+						<div class="member-info">
+							<div class="inner">
+								<p class="item-heading">About Bennet</p>
+								<div class="personal-info">
+									<p class="text">David Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam amet, illo tempora suscipit est veritatis consequatur in tempore quae nihil labore error cum deleniti quam aliquid delectus. Distinctio omnis nisi veritatis necessitatibus, ea, odit obcaecati. Rem sequi, magni. Soluta!</p>
+									<span class="svg-icon icon-link">
+										<svg>
+											<use xlink:href="#link"></use>
+										</svg>
+									</span>
+									<ul class="member-links">
+										<li class="social-link"><a href="facebook.com/id2222" class="link link--fb">Facebook</a></li>
+										<li class="social-link"><a href="twitter.com/id2222" class="link link--tw">Twitter</a></li>
+										<li class="social-link"><a href="linkedin.com/id2222" class="link link--li">LinkedIn</a></li>
+										<li class="social-link"><a href="instagram.com/id2222" class="link link--in">Instagram</a></li>
+									</ul>
+								</div>
+								<span class="arrow">&#9650;</span>
+							</div>
+						</div>
+					</div>
+					<div class="team-item colored-3">
+						<div class="member">
+							<div class="member-photo photo--grad">
+								<img class="img" src="images/team/female.jpg" alt="Anna Schroder, Designer">
+							</div>
+							<h3 class="member-name item-heading">Anna Schroder</h3>
+							<p class="member-position item-description">Designer</p>
+						</div>
+						<div class="member-info">
+							<div class="inner">
+							<p class="item-heading">About Bennet</p>
+							<div class="personal-info">
+								<p class="text">Anna is woman. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis qui earum a, at placeat iure veniam inventore similique cumque molestiae animi, necessitatibus laboriosam ipsa rerum in autem vero vitae doloremque natus sint, neque. Repellat, quasi neque? Eaque, enim animi quibusdam nobis, voluptates vero placeat tenetur, assumenda quam ullam accusantium suscipit!</p>
+								<span class="svg-icon icon-link">
+									<svg>
+										<use xlink:href="#link"></use>
+									</svg>
+								</span>
+								<ul class="member-links">
+									<li class="social-link"><a href="facebook.com/id3333" class="link link--fb">Facebook</a></li>
+									<li class="social-link"><a href="twitter.com/id3333" class="link link--tw">Twitter</a></li>
+									<li class="social-link"><a href="linkedin.com/id3333" class="link link--li">LinkedIn</a></li>
+									<li class="social-link"><a href="instagram.com/id3333" class="link link--in">Instagram</a></li>
+								</ul>
+								<span class="arrow">&#9650;</span>
+							</div>
+							</div>
+						</div>
+					</div>
+					<div class="team-item colored-4">
+						<div class="member">
+							<div class="member-photo photo--grad">
+								<img class="img" src="images/team/male.jpg" alt="Jason Teichmann, Consultant">
+							</div>
+							<h3 class="member-name item-heading">Jason Teichmann</h3>
+							<p class="member-position item-description">Consultant</p>
+						</div>
+						<div class="member-info">
+							<div class="inner">
+							<p class="item-heading">About Bennet</p>
+							<div class="personal-info">
+								<p class="text">Jason is our consultant. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolor temporibus, ad, est quisquam quia. Quas, accusantium eaque asperiores autem id reprehenderit cum aliquid, molestiae.</p>
+								<span class="svg-icon icon-link">
+									<svg>
+										<use xlink:href="#link"></use>
+									</svg>
+								</span>
+								<ul class="member-links">
+									<li class="social-link"><a href="facebook.com/id44444" class="link link--fb">Facebook</a></li>
+									<li class="social-link"><a href="twitter.com/id44444" class="link link--tw">Twitter</a></li>
+									<li class="social-link"><a href="linkedin.com/id44444" class="link link--li">LinkedIn</a></li>
+									<li class="social-link"><a href="instagram.com/id44444" class="link link--in">Instagram</a></li>
+								</ul>
+								<span class="arrow">&#9650;</span>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="page__line page__line--stats" style="background-image: url(images/stats-img.jpg)">
+		<div class="page__cell">
+			<section class="section">
+				<h2 class="hidden">company statistics</h2>
+				<div class="statistics">
+					<div class="stats-item colored-1">
+						<span class="icon icon-graphic"></span>
+						<p class="stats-counts">12.458+</p>
+						<h3 class="stats-heading">Projects Completed</h3>
+						<span class="svg-icon icon-radio">
+							<svg>
+								<use xlink:href="#radio"></use>
+							</svg>
+						</span>
+					</div>
+					<div class="stats-item colored-2">
+						<span class="icon icon-client"></span>
+						<p class="stats-counts">1,796+</p>
+						<h3 class="stats-heading">Satisfied Clients</h3>
+						<span class="svg-icon icon-radio">
+							<svg>
+								<use xlink:href="#radio"></use>
+							</svg>
+						</span>
+					</div>
+					<div class="stats-item colored-3">
+						<span class="icon icon-heart"></span>
+						<p class="stats-counts">1,000+</p>
+						<h3 class="stats-heading">Positive Feedbacks</h3>
+						<span class="svg-icon icon-radio">
+							<svg>
+								<use xlink:href="#radio"></use>
+							</svg>
+						</span>
+					</div>
+					<div class="stats-item colored-4">
+						<span class="icon icon-gift"></span>
+						<p class="stats-counts">1,500+</p>
+						<h3 class="stats-heading">Freebies Released</h3>
+						<span class="svg-icon icon-radio">
+							<svg>
+								<use xlink:href="#radio"></use>
+							</svg>
+						</span>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="page__line page__line--work-steps">
+		<div class="page__cell">
+			<section id="work-steps" class="section">
+				<h2 class="heading">work steps</h2>
+				<p class="title-description">
+					We understand your requirement and provide quality works
+				</p>
+				<div class="step colored-1">
+					<div class="step-item animated slide-right">
+						<h3 class="item-heading--steps">Project Understanding</h3>
+						<p class="text">
+							Buyer strategy incubator niche market startup. Entrepreneur non disclosure agreement MVP traction beta social media investor accelerator.
+						</p>
+					</div>
+					<div class="step-img photo--grad">
+						<img src="images/steps-1.jpg" alt="understanding project's requirement" class="img">
+					</div>
+				</div>
+				<div class="step colored-2">
+					<div class="step-item animated slide-left">
+						<h3 class="item-heading--steps">Reseach &amp; Planning</h3>
+						<p class="text">
+							Buyer strategy incubator niche market startup. Entrepreneur non disclosure agreement MVP traction beta social media investor accelerator.
+						</p>
+					</div>
+					<div class="step-img photo--grad">
+						<img src="images/steps-2.jpg" alt="reseach and planning project" class="img">
+					</div>
+				</div>
+				<div class="step colored-3">
+					<div class="step-item animated slide-right">
+						<h3 class="item-heading--steps">Wireframe &amp; Design</h3>
+						<p class="text">
+							Buyer strategy incubator niche market startup. Entrepreneur non disclosure agreement MVP traction beta social media investor accelerator.
+						</p>
+					</div>
+					<div class="step-img photo--grad">
+						<img src="images/steps-3.jpg" alt="wireframe and design project" class="img">
+					</div>
+				</div>
+				<div class="step colored-4">
+					<div class="step-item animated slide-left">
+						<h3 class="item-heading--steps">Development</h3>
+						<p class="text">
+							Buyer strategy incubator niche market startup. Entrepreneur non disclosure agreement MVP traction beta social media investor accelerator.
+						</p>
+					</div>
+					<div class="step-img photo--grad">
+						<img src="images/steps-4.jpg" alt="project development" class="img">
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="page__line page__line--pricing">
+		<div class="page__cell">
+			<section id="pricing" class="section">
+				<h2 class="heading">pricing table</h2>
+				<p class="title-description">
+					We understand your requirement and provide quality works
+				</p>
+				<div class="offers">
+					<div class="offer-item colored-2">
+						<h4 class="offer-name">Starter</h4>
+
+						<div class="offer-price">
+							<div class="price__text">
+								<span class="price">&#36; 125</span>
+								<span>Per Month</span>
+							</div>
+						</div>
+						<ul class="offer-tariff">
+							<li class="tariff-option">200GB Online Storage</li>
+							<li class="tariff-option">20 File Per Day</li>
+							<li class="tariff-option">2TB Monthly Bandwidth</li>
+							<li class="tariff-option disable">&#10003; Secure Platform</li>
+							<li class="tariff-option">&#10003; 24 / 7 Customer Support</li>
+							<li class="tariff-option">&#10003; Fast &amp; Reliable</li>
+						</ul>
+						<a href="#" class="link button button--price">Get started</a>
+					</div>
+					<div class="offer-item colored-1">
+						<h4 class="offer-name">Ultimate</h4>
+						<div class="offer-price">
+							<div class="price__text">
+								<span class="price">&#36; 195</span>
+								<span>Per Month</span>
+							</div>
+						</div>
+						<ul class="offer-tariff">
+							<li class="tariff-option">800GB Online Storage</li>
+							<li class="tariff-option">Unlimited File Per Day</li>
+							<li class="tariff-option">10TB Monthly Bandwidth</li>
+							<li class="tariff-option">&#10003; Secure Platform</li>
+							<li class="tariff-option">&#10003; 24 / 7 Customer Support</li>
+							<li class="tariff-option">&#10003; Fast &amp; Reliable</li>
+						</ul>
+						<a href="#" class="link button button--price">Get started</a>
+					</div>
+					<div class="offer-item colored-3">
+						<h4 class="offer-name">Professional</h4>
+						<div class="offer-price">
+							<div class="price__text">
+								<span class="price">&#36; 125</span>
+								<span>Per Month</span>
+							</div>
+						</div>
+						<ul class="offer-tariff">
+							<li class="tariff-option">200GB Online Storage</li>
+							<li class="tariff-option">20 File Per Day</li>
+							<li class="tariff-option">2TB Monthly Bandwidth</li>
+							<li class="tariff-option">&#10003; Secure Platform</li>
+							<li class="tariff-option">&#10003; 24 / 7 Customer Support</li>
+							<li class="tariff-option">&#10003; Fast &amp; Reliable</li>
+						</ul>
+						<a href="#" class="link button button--price">Get started</a>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="page__line page__line--testimonials" style="background-image: url(images/office.jpeg)">
+		<div class="page__cell">
+			<section id="testimonials" class="section">
+				<h2 class="heading">testimonials</h2>
+				<p class="title-description">
+					We understand your requirement and provide quality works
+				</p>
+				<div class="feedbacks-list owl-carousel">
+					<div class="feedbacks-item colored-1">
+						<div class="feedback__img photo--border">
+							<img src="images/team/female.jpg" alt="happy client" class="img--grad img--client">
+						</div>
+						<div class="feedback">
+							<p class="text">Deployment ownership non-disclosure agreement vesting period crowdfunding success influencer partnership equity series A financing network effects user experience crowdsource. Burn rate stock bootstrapping direct mailing release client traction creative facebook monetization crowdfunding rockstar.</p>
+							<p class="feedback__client-signature">Melina</p>
+							<p class="feedback__client-name">Melina Albrecht</p>
+							<p class="feedback__client-company">Founder, TingTang</p>
+						</div>
+					</div>
+					<div class="feedbacks-item colored-2">
+						<div class="feedback__img photo--border">
+							<img src="images/team/male.jpg" alt="happy client" class="img--grad img--client">
+						</div>
+						<div class="feedback">
+							<p class="text">Deployment ownership non-disclosure agreement vesting period crowdfunding success influencer partnership equity series A financing network effects user experience crowdsource. Burn rate stock bootstrapping direct mailing release client traction creative facebook monetization crowdfunding rockstar.</p>
+							<p class="feedback__client-signature">C. A</p>
+							<p class="feedback__client-name">Captain America</p>
+							<p class="feedback__client-company">Warior, Gidra</p>
+						</div>
+					</div>
+					<div class="feedbacks-item colored-3">
+						<div class="feedback__img photo--border">
+							<img src="images/client.jpg" alt="happy client" class="img--grad img--client">
+						</div>
+						<div class="feedback">
+							<p class="text">Deployment ownership non-disclosure agreement vesting period crowdfunding success influencer partnership equity series A financing network effects user experience crowdsource. Burn rate stock bootstrapping direct mailing release client traction creative facebook monetization crowdfunding rockstar.</p>
+							<p class="feedback__client-signature">Iron Man</p>
+							<p class="feedback__client-name">Iron Man</p>
+							<p class="feedback__client-company">Developer, Stark-Ind</p>
+						</div>
+					</div>
+					<div class="feedbacks-item colored-4">
+						<div class="feedback__img photo--border">
+							<img src="images/client.jpg" alt="happy client" class="img--grad img--client">
+						</div>
+						<div class="feedback">
+							<p class="text">Deployment ownership non-disclosure agreement vesting period crowdfunding success influencer partnership equity series A financing network effects user experience crowdsource. Burn rate stock bootstrapping direct mailing release client traction creative facebook monetization crowdfunding rockstar.</p>
+							<p class="feedback__client-signature">Client 4</p>
+							<p class="feedback__client-name">Client 4</p>
+							<p class="feedback__client-company">Manager, SomeOtherCompany</p>
+						</div>
+					</div>
+					<div class="feedbacks-item colored-1">
+						<div class="feedback__img photo--border">
+							<img src="images/client.jpg" alt="happy client" class="img--grad img--client">
+						</div>
+						<div class="feedback">
+							<p class="text">Deployment ownership non-disclosur partnership equity series A financing network effects user experience crowdsource. Burn rate stock bootstrapping direct mailing crowdfunding rockstar.</p>
+							<p class="feedback__client-signature">Helen</p>
+							<p class="feedback__client-name">Helen Beauty</p>
+							<p class="feedback__client-company">Crisis Manager, Throy</p>
+						</div>
+					</div>
+					<div class="feedbacks-item colored-2">
+						<div class="feedback__img photo--border">
+							<img src="" alt="happy client" class="img--grad img--client">
+						</div>
+						<div class="feedback">
+							<p class="text">Deployment ownership non-disclosure agreement vesting period crowdfunding success influencer partnership equity series A financing network effects user experience crowdsource. Burn rate stock bootstrapping direct mailing release client traction creative facebook monetization crowdfunding rockstar.</p>
+							<p class="feedback__client-signature">Thor</p>
+							<p class="feedback__client-name">Thor Khonung</p>
+							<p class="feedback__client-company">Director, Asgard</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="page__line page__line--select-us">
+		<div class="page__cell">
+			<section id="select-us" class="section">
+				<h2 class="heading">why select us?</h2>
+				<p class="title-description">
+					We understand your requirement and provide quality works
+				</p>
+				<div class="reasons">
+					<div class="reason-item colored-1">
+						<span class="icon icon--grows"></span>
+						<h3 class="item-heading item-heading--reasons">Business growth</h3>
+						<p class="text">Success scrum project funding marketing seed money prototype innovator direct hackathon android angel investor.</p>
+					</div>
+					<div class="reason-item colored-2">
+						<span class="icon icon--range"></span>
+						<h3 class="item-heading item-heading--reasons">Unlimited revisions</h3>
+						<p class="text">Technology founders churn rate niche market long tail release iteration burn rate backing. Churn rate accelerator.</p>
+					</div>
+					<div class="reason-item colored-3">
+						<span class="icon icon--arrow"></span>
+						<h3 class="item-heading item-heading--reasons">Ultimate perfection</h3>
+						<p class="text">Deployment ownership non-disclosure agreement vesting period crodfunding success influencer partnership.</p>
+					</div>
+					<div class="reason-item colored-4">
+						<span class="icon icon--screen"></span>
+						<h3 class="item-heading item-heading--reasons">Smart Experience</h3>
+						<p class="text">Success scrum project funding marketing seed money prototype innovator direct hackathon android angel investor.</p>
+					</div>
+					<div class="reason-item colored-1">
+						<span class="icon icon--calendar"></span>
+						<h3 class="item-heading item-heading--reasons">Strict Deadline</h3>
+						<p class="text">Technology founders churn rate niche market long tail release iteration burn rate backing. Churn rate accelerator.</p>
+					</div>
+					<div class="reason-item colored-2">
+						<span class="icon icon--award"></span>
+						<h3 class="item-heading item-heading--reasons">Award&#45;winning company</h3>
+						<p class="text">Deployment ownership non-disclosure agreement vesting period crodfunding success influencer partnership.</p>
+					</div>
+				</div>
+				<div class="proclamation">
+					<p class="proclamation__text">Start your journy with us now</p>
+					<a href="#" class="link button">Get started</a>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="page__line page__line--blog">
+		<div class="page__cell">
+			<section id="blog" class="section">
+				<h2 class="heading">our blog</h2>
+				<p class="title-description">
+					We understand your requirement and provide quality works
+				</p>
+				<div class="relation">
+					<div class="relation__offset"></div>
+					<div class="articles relation__content">
+						<article class="article-item article-item--active colored-1">
+							<div class="article__img">
+								<img src="images/blog-news-3.jpg" alt="" class="img">
+							</div>
+							<div class="article__content">
+								<div class="article-params">
+									<span class="article-author">Damian Schreiber</span>
+									<time datetime="2015-12-10" class="article-date">December 10, 2015</time>		
+								</div>
+								<h3 class="article-heading">Facebook's CNN livestream will test its place in the second screen era</h3>
+								<div class="article-text">
+									<p class="text">
+										Traction seed money infographic accelerator pivot value proposition ownership business-to-consumer iteration market analytics paradigm 
+									</p> 
+									<a href="#" class="link link--more">Read Full Article</a>
+								</div>
+							</div>
+						</article>
+						<article class="article-item colored-2">
+							<div class="article__img">
+								<img src="images/blog-news.jpg" alt="" class="img">
+							</div>
+							<div class="article__content">
+								<div class="article-params">
+									<span class="article-author">Damian Schreiber</span>
+									<time datetime="2015-12-10" class="article-date">December 10, 2015</time>		
+								</div>
+								<h3 class="article-heading">Google Street View adds virtual reality support based on II</h3>
+								<div class="article-text">
+									<p class="text">Traction seed money infographic accelerator pivot value proposition ownership business-to-consumer iteration market analytics paradigm </p> 
+									<a href="#" class="link link--more">Read Full Article</a>
+								</div>
+							</div>
+						</article>
+						<article class="article-item colored-3">
+							<div class="article__img">
+								<img src="images/blog-news-2.jpg" alt="" class="img">
+							</div>
+							<div class="article__content">
+								<div class="article-params">
+									<span class="article-author">Damian Schreiber</span>
+									<time datetime="2015-12-10" class="article-date">December 10, 2015</time>		
+								</div>
+								<h3 class="article-heading">Google Street View adds virtual reality support more text  </h3>
+								<div class="article-text">
+									<p class="text">Traction seed money infographic accelerator pivot value proposition ownership business-to-consumer iteration market analytics paradigm </p> 
+									<a href="#" class="link link--more">Read Full Article</a>
+								</div>
+							</div>
+						</article>
+						<article class="article-item colored-4">
+							<div class="article__img">
+								<img src="images/blog-news-3.jpg" alt="social media sites news" class="img">
+							</div>
+							<div class="article__content">
+								<div class="article-params">
+									<span class="article-author">Damian Schreiber</span>
+									<time datetime="2015-12-10" class="article-date">December 25, 2015</time>		
+								</div>
+								<h3 class="article-heading">Social media make you alone</h3>
+								<div class="article-text">
+									<p class="text">Traction seed money infographic accelerator pivot value proposition ownership business-to-consumer iteration market analytics paradigm </p> 
+									<a href="#" class="link link--more">Read Full Article</a>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="page__line page__line--subscribe">
+		<div class="page__cell">
+			<section class="section">
+				<h2 class="subscribe-heading">Subscribe to Newsletter</h2>
+				<form action="" method="post" id="subscribe">
+					<input type="email" name="email" class="input-subscribe" placeholder="Enter your email">
+					<button type="submit" class="button button-subscribe">Subscribe now</button>
+				</form>
+			</section>
+		</div>
+	</div>
+	<div class="page__line" style="background-image: url(images/nature-forest-trees-fog.jpeg)">
+		<div class="page__line--contacts">
+			<div class="page__cell">
+				<section id="contacts" class="section">
+					<h2 class="heading">get in touch</h2>
+					<p class="title-description">
+						We understand your requirement and provide quality works
+					</p>
+					
+					<form id="contact" action="" method="POST" name="contact" class="contactForm">
+						<div class="messegeResult"><span>Your request are sent</span></div>
+						<input type="text" name="customName" class="input-custom" placeholder="Your Name" required>
+						<input type="email" name="customEmail" class="input-custom" placeholder="Your Email" required>
+						<input type="text" name="customSubject" class="input-custom" placeholder="Subject">
+						<input type="text" name="customBudget" class="input-custom" placeholder="Project Budget">
+						<textarea name="customMessage" id="customMessage" cols="30" rows="10" class="input-custom input-custom--message" placeholder="Your Message" ></textarea>
+						<button type="submit" form="contact" class="button" id="btnSubmit">send message</button>
+					</form>
+				</section>
+			</div>
+		</div>
+		<div class="page__line--footer">
+			<div class="page__cell">
+				<footer id="footer" class="footer">
+					<div class="footer-item footer-item--logo colored-1">
+						<a href="#" class="logo logo--footer">Alexis</a>
+					</div>
+					<div class="footer-item colored-2">
+						<p class="item-heading--footer">Alexis LLC.</p>
+						<p class="address">4125 Brighton Circle Road Little Falls, MN 563445</p>
+					</div>
+					<div class="footer-item colored-3">
+						<p class="item-heading--footer">Alexis LLC UK.</p>
+						<p class="address">81 Golden Knowes Road FRESHFIELD l37 6 TP</p>
+					</div>
+					<div class="footer-item colored-4">
+						<p class="item-heading--footer">Follow us</p>
+						<div class="footer-social-icons">
+							<a href="#" class="icon icon-social--fb"></a>
+							<a href="#" class="icon icon-social--tw"></a>
+							<a href="#" class="icon icon-social--in"></a>
+							<a href="#" class="icon icon-social--gp"></a>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+	  $(window).on('load', function () {
+	    $preloader = $('.loaderArea'),
+	    $loader = $preloader.find('.loader');
+	    $preloader.fadeOut();
+	    $loader.delay(3500).fadeOut('slow');
+	  });
+	</script>
+	<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+	<script src="js/custom.js"></script>
+
+ </body>
+ </html>

@@ -1,0 +1,42 @@
+.statistics {
+	display: flex;
+	justify-content: space-between;
+}	
+.stats-item {
+	flex: 1 2 25%;
+	display: flex;
+	flex-flow: column nowrap;
+	@extend .no-select-text;
+}
+.stats-heading {
+	font-size: 1rem;
+	font-weight: normal;
+	text-transform: capitalize;
+	color: #cecece;	
+	margin: auto;
+}
+.stats-counts {
+	@include size-in-rem(font-size, 20px);
+	font-weight: 400;
+	color: #fefefe;	
+}
+.stats-item {
+	.icon {
+		@include size-in-rem(width, 55px);
+		@include size-in-rem(height, 52px);
+		@include size-in-rem(background-position-x, -130px);
+		margin: 0 auto;
+	}
+	.svg-icon {
+		width: 1rem;
+		height: 1rem;
+		margin: 1.5rem auto 0;
+	}
+}
+.icon-graphic {background-position-y: -0.071em;}
+.icon-client {background-position-y: -3.6em;}
+.icon-heart {background-position-y: -7.2em;}
+.icon-gift {background-position-y: -10.5em;}
+
+
+
