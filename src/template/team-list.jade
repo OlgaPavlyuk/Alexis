@@ -1,0 +1,42 @@
+div(class="page__line page__line--team")
+	div.page__cell
+		section(id="our-team", class="section")
+			h2.heading our team
+			p(class="title-description").
+				We understand your requirement and provide quality works
+		
+			- var memberList = [{name: "Michael Schmitt", position: "Founder & CEO", img: "images/team/male.jpg", desc: "text"},{name: "David Kramer", position: "Lead Developer", img: "images/team/male.jpg", desc: "text"},{name: "Anna Schroder", position: "Designer", img: "images/team/male.jpg", desc: "text"},{name: "Jason Teichmann", position: "Consultant", img: "images/team/male.jpg", desc: "text"}];
+
+			mixin team-member(member) 
+					div(class="team-item colored-1")
+						div.member
+							div(class="member-photo photo--grad")
+								img(class="img", src=member.img, alt="")
+							h3(class="member-name item-heading")= member.name 
+							p(class="member-position item-description")= member.position
+						div(class="member-info") 
+							div(class="inner")
+								p(class="item-heading") About Bennet
+								div(class="personal-info")
+									p.text= member.desc 
+									span(class="svg-icon icon-link") 
+										// svg.svg
+										// 	use(xlink:href="#link")
+									ul(class="member-links")
+										li(class="social-links")
+											a(href=member.fb, class="link link--fb")
+										li(class="social-links")
+											a(href=member.tw, class="link link--tw")
+										li(class="social-links")
+											a(href=member.li, class="link link--li")
+										li(class="social-links")
+											a(href=member.in, class="link link--in")
+								span.arrow &#9650;
+			
+			div.team 
+				for member in memberList
+					+team-member(member)
+
+
+
+
